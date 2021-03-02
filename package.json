@@ -1,0 +1,19 @@
+{
+  "name": "whapnomore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/aidenybai/whapnomore.git",
+  "author": "Aiden Bai <mail.contraband@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "html-to-text": "^7.0.0",
+    "lodash": "^4.17.21",
+    "node-summary": "^1.2.0",
+    "request": "^2.88.2",
+    "sbd": "^1.0.18",
+    "text-summarization": "^1.0.3"
+  }
+}

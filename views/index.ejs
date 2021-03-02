@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/lucia"></script>
+    <title>WHAP NO MORE</title>
+  </head>
+  <body>
+    <div l-state="{ contentThatNeedsToBeSummarized: '', contentThatIsSummarized: '' }">
+      <form
+        @submit.prevent="
+          fetch(`/summarize?content=${encodeURIComponent(contentThatNeedsToBeSummarized)}`)
+            .then((res) => res.json())
+            .then((content) => {
+              contentThatIsSummarized = content;
+            })
+        "
+      >
+        <textarea l-model="contentThatNeedsToBeSummarized"></textarea>
+        <button>Summarize</button>
+      </form>
+
+      <ul l-for="summary in contentThatIsSummarized">
+        <li l-text="this.summary"></li>
+      </ul>
+    </div>
+  </body>
+</html>
